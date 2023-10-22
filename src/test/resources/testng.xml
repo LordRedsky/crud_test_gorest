@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="API Automation Suite">
+    <test name="Gorest API Test">
+        <classes>
+            <class name="gorestapitest.GetGorestAPITest"/>
+            <class name="gorestapitest.CRUDGoresAPITest"/>
+        </classes>
+    </test>
+</suite>
