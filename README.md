@@ -19,9 +19,9 @@ Jalankan command untuk __generate allure report__ via terminal
 allure serve build/allure-results
 ```
 
-### Result
-![img.png](img.png)
+### Allure Results
+![img_1.png](img_1.png)
 
 
 
-__@Lord Redsky__
+_Lord Redsky__

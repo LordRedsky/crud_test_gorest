@@ -17,7 +17,7 @@ public class CRUDGoresAPITest {
     int newUserID;
 
     @Test
-    public void postNewUser() {
+    public void a_postNewUser() {
         RestAssured.baseURI = "https://gorest.co.in/";
         String access_token = "664932660bd1dba46072c20c2e9c86523733683ab08f2e47b5fcc746a39c869f";
         String auth = "Bearer " + access_token;
@@ -52,7 +52,7 @@ public class CRUDGoresAPITest {
 
     // VALIDATE NEW USER BY ID
     @Test
-    public void verificationNewRegisteredUserByID() {
+    public void b_verificationNewRegisteredUserByID() {
         RestAssured.baseURI = "https://gorest.co.in/";
         String access_token = "664932660bd1dba46072c20c2e9c86523733683ab08f2e47b5fcc746a39c869f";
         String auth = "Bearer " + access_token;
@@ -68,7 +68,7 @@ public class CRUDGoresAPITest {
 
     //PUT update new name
     @Test
-    public void updateDataUserByID() {
+    public void c_updateDataUserByID() {
         RestAssured.baseURI = "https://gorest.co.in/";
         String access_token = "664932660bd1dba46072c20c2e9c86523733683ab08f2e47b5fcc746a39c869f";
         String auth = "Bearer " + access_token;
@@ -100,7 +100,7 @@ public class CRUDGoresAPITest {
 
     //PATCH update status
     @Test
-    public void updateStatusUser() {
+    public void d_updateStatusUser() {
         RestAssured.baseURI = "https://gorest.co.in/";
         String access_token = "664932660bd1dba46072c20c2e9c86523733683ab08f2e47b5fcc746a39c869f";
         String auth = "Bearer " + access_token;
