@@ -44,9 +44,7 @@ public class CRUDGoresAPITest {
 
         Response response = requestSpecification.post("public/v2/users");
         int statusCode = response.getStatusCode();
-//        int idNew = response.then().contentType(ContentType.JSON).extract().path("id");
         newUserID = response.then().contentType(ContentType.JSON).extract().path("id");
-//        newUserID = idUserNew;
         System.out.println(newUserID);
         Assert.assertEquals(statusCode, 201);
 
@@ -64,7 +62,6 @@ public class CRUDGoresAPITest {
                 .contentType("application/json")
                 .when().get("public/v2/users/" + newUserID)
                 .then()
-                .log().all()
                 .assertThat().statusCode(200);
 
     }
@@ -97,7 +94,6 @@ public class CRUDGoresAPITest {
                 .body(payload)
                 .put("public/v2/users/" + newUserID)
                 .then()
-                .log().all()
                 .assertThat().statusCode(200)
                 .assertThat().body("name", Matchers.equalTo(newName));
     }
