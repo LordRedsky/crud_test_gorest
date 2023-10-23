@@ -7,8 +7,6 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
@@ -25,7 +23,7 @@ public class CRUDGoresAPITest {
         String auth = "Bearer " + access_token;
 
         String name_value = "Redsky24";
-        String email_value = "lord_redsky0123456789@mail.com";
+        String email_value = "lord_redsky11@mail.com";
         String gender_value = "male";
         String status_value = "active";
 
@@ -132,10 +130,9 @@ public class CRUDGoresAPITest {
                 .assertThat().body("status", Matchers.equalTo(updateStatus));
     }
 
-    //DELETE delete data
-    @AfterTest
+    //DELETE delete data by ID
     @Test
-    public void deleteDataByID() {
+    public void z_deleteDataByID() {
         RestAssured.baseURI = "https://gorest.co.in/";
         String access_token = "664932660bd1dba46072c20c2e9c86523733683ab08f2e47b5fcc746a39c869f";
         String auth = "Bearer " + access_token;
